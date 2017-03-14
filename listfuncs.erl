@@ -42,7 +42,7 @@ median(XS) ->
 	Length = length(XS),
 	Mid = Length div 2,
 	if 
-		Length rem 2 == 0 -> (lists:nth(Mid - 1, Sorted) + lists:nth(Mid, Sorted))/ 2.0;		
-		true              -> lists:nth(Mid - 1, Sorted)
+		Length rem 2 == 0 -> (lists:nth(Mid, Sorted) + lists:nth(Mid + 1, Sorted))/ 2.0;		
+		true              -> lists:nth(Mid + 1, Sorted)
 	end. 
 
